@@ -4,12 +4,12 @@ Welcome to the **Cultural Landmarks Workshop**! In this session, you will build 
 
 We will use the **Google Agent Development Kit (ADK)** and deploy the application to **Google Cloud Run**.
 
-![System Diagram](https://github.com/nuno-joao-andrade-dev/resources_gallery/blob/main/cultural-landmarks-assistant.gemini.series.png?raw=true)
+
+![System Diagram](https://raw.githubusercontent.com/nuno-joao-andrade-dev/resources_gallery/refs/heads/main/culturallandmarks.gemini.series.png)
 
 **Resources:**
-- **Full Article**: [Cultural Landmarks Assistant on nja.dev](https://nja.dev/posts/cultural landmarkassistant/)
-- **Architecture Diagram**: [Edit in DrawIt](https://drawit.nja.dev/?gallery=cultural-landmarks-assistant.gemini.series)
-- **GitHub Repository**: [cultural-landmarks-assistant.gemini.series](https://github.com/nuno-joao-andrade-dev/cultural-landmarks-assistant.gemini.series.git)
+- **Architecture Diagram**: [Edit in DrawIt](https://drawit.nja.dev/?gallery=culturallandmarks.gemini.series)
+- **GitHub Repository**: [cultural-landmarks-assistant.gemini.series](https://github.com/nuno-joao-andrade-dev/cultural-landmarks-assistant.gemini.series)
 
 ---
 
@@ -301,7 +301,7 @@ app.post('/api/chat', async (req, res) => {
  const text = stringifyContent(event);
  if (text) fullText += text;
  
- // Check if a tool (like search_documents) was called
+ // Check if a tool (like read_cultural_landmarks) was called
  if (event.toolCalls && event.toolCalls.length > 0) toolUsed = true;
  }
  }

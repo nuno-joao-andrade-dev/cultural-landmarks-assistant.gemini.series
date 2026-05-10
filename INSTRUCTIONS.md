@@ -10,7 +10,7 @@ Build a professional AI assistant using the **Google Agent Development Kit (ADK)
 - Learn about `LlmAgent`, `Runner`, and `InMemorySessionService`.
 
 ### Stage 2: Integrating the Local Knowledge Base
-- Use a **Local Knowledge Base** (`LocalFileToolset`) with the `base/culturallandmarks.md` file instead of a remote MCP server.
+- Use a **Local Knowledge Base** (`FunctionTool`) with the `base/culturallandmarks.md` file instead of a remote MCP server.
 - The agent now provides a "Cultural Curiosity" in each response.
 
 ### Stage 3: Professional Web Interface
@@ -32,7 +32,7 @@ Build a professional AI assistant using the **Google Agent Development Kit (ADK)
 ## Key Features
 - **Markdown Support**: The agent returns responses in Markdown, and the frontend renders them using `react-markdown`.
 - **IndexedDB**: Conversations are saved locally in your browser.
-- **Local Knowledge Base**: Powered by `LocalFileToolset` and `base/culturallandmarks.md`.
+- **Local Knowledge Base**: Powered by `FunctionTool` and `base/culturallandmarks.md`.
 - **Vertex AI**: Powered by `gemini-3.1-flash-lite-preview`.
 
 ## Running Locally

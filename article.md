@@ -53,8 +53,14 @@ const agent = new LlmAgent({
   provider: 'vertexai', 
   instruction: 'Respond in a clear way. Use the provided landmarks file to provide detailed historical and cultural information about Beja. At the end of every response, always include a unique "Cultural Curiosity" section with an interesting fact from the file.',
   tools: [
-    new LocalFileToolset({
-      files: [path.join(__dirname, '../../../base/culturallandmarks.md')]
+    new FunctionTool({
+      name: 'read_cultural_landmarks',
+      description: 'Read the cultural landmarks file to get information about Beja.',
+      parameters: z.object({}),
+      execute: async () => {
+        const filePath = path.join(__dirname, '../../../base/culturallandmarks.md');
+        return { content: fs.readFileSync(filePath, 'utf-8') };
+      }
     })
   ]
 });
